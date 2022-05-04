@@ -38,11 +38,11 @@ while True:
         for hand_landmarks in results.multi_hand_landmarks:
             mp_drawing.draw_landmarks(
                 image, hand_landmarks, mp_hands.HAND_CONNECTIONS)
-
+#For the drone image
     cv2.imshow('Drone', image)
 
     key = cv2.waitKey(1) & 0xff
-    if key == 27: # ESCArgument parsing
+    if key == 27: 
         break
     elif key == ord('w'):
         tello.move_forward(30)
